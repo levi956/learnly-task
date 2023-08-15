@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:rnly/app/modules/quiz/presentation/atoms/quiz_option_card.dart';
 import 'package:rnly/core/core.dart';
 
-import '../../data/quiz_question_model.dart';
+import '../../data/models/quiz_question_model.dart';
 import '../../domain/provider/quiz_current_question_index_provider.dart';
 import '../../../scores/presentation/domain/provider/quiz_score_notifier_provider.dart';
 import '../../../scores/presentation/pages/quiz_score_page.dart';

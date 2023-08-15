@@ -53,7 +53,7 @@ class _PrepQuizPageState extends State<PrepQuizPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Beginner and Mid-Level Questions to see test if major concepts are understood.",
+                              "Basic and Intermediate Questions to Assess Comprehension of Core Concepts",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 20,
@@ -61,7 +61,7 @@ class _PrepQuizPageState extends State<PrepQuizPage> {
                             ),
                             SizedBox(height: 30),
                             Text(
-                              "But remembeer to take a deep breath, you got this!",
+                              "Remember to pause and take a deep breath – you've got this!",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16,

@@ -22,6 +22,7 @@ class _QuizTextCountComponentState extends State<QuizTextCountComponent> {
     return questionsNotifer.state.when(
       done: (data) {
         return Container(
+          margin: const EdgeInsets.all(Spacings.spacing10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Spacings.spacing10),
           ),
@@ -30,7 +31,7 @@ class _QuizTextCountComponentState extends State<QuizTextCountComponent> {
             children: data.asMap().entries.map((entry) {
               int index = entry.key;
               return Container(
-                padding: const EdgeInsets.all(Spacings.spacing16),
+                padding: const EdgeInsets.all(Spacings.spacing20),
                 margin: const EdgeInsets.only(left: Spacings.spacing10),
                 decoration: BoxDecoration(
                   color: index == questionIndex.state.data!

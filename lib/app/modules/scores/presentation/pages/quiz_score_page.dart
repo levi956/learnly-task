@@ -29,47 +29,42 @@ class QuizScorePage extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(Spacings.spacing20),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
+                        const Text(
+                          "You scored!",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const Text(
-                              "You scored!",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
-                              ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                quizScoreProvider.state.when(
-                                  done: (score) {
-                                    return Text(
-                                      fractionToPercentage(score).toString(),
-                                      style: const TextStyle(
-                                        fontSize: 75,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    );
-                                  },
-                                  error: (_) => Text(_.toString()),
-                                  loading: () => const SizedBox.shrink(),
-                                  idle: () => Text(0.toString()),
-                                ),
-                                const Text(
-                                  "%",
-                                  style: TextStyle(
+                            quizScoreProvider.state.when(
+                              done: (score) {
+                                return Text(
+                                  fractionToPercentage(score).toString(),
+                                  style: const TextStyle(
+                                    fontSize: 75,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 50,
                                   ),
-                                ),
-                              ],
+                                );
+                              },
+                              error: (_) => Text(_.toString()),
+                              loading: () => const SizedBox.shrink(),
+                              idle: () => Text(0.toString()),
+                            ),
+                            const Text(
+                              "%",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 50,
+                              ),
                             ),
                           ],
                         ),
@@ -81,7 +76,7 @@ class QuizScorePage extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      const SizedBox(width: 20),
+                      const SizedBox(width: Spacings.spacing20),
                       DashboardItem(
                         icon: Icons.exit_to_app_rounded,
                         subText: "",
@@ -95,7 +90,7 @@ class QuizScorePage extends StatelessWidget {
                         },
                         color: red.withOpacity(0.2),
                       ),
-                      const SizedBox(width: 10),
+                      const SizedBox(width: Spacings.spacing10),
                     ],
                   ),
                 )

@@ -1,5 +1,5 @@
 import 'package:rnly/app/modules/quiz/data/quiz_data.dart';
-import 'package:rnly/app/modules/quiz/data/quiz_question_model.dart';
+import 'package:rnly/app/modules/quiz/data/models/quiz_question_model.dart';
 import 'package:rnly/core/framework/service_response.dart';
 
 class QuizService {

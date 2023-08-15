@@ -1,4 +1,4 @@
-import 'quiz_question_model.dart';
+import 'models/quiz_question_model.dart';
 
 List<QuizQuestionModel> flutterQuestions = [
   QuizQuestionModel(

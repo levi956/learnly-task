@@ -1,4 +1,4 @@
-import 'package:rnly/app/modules/quiz/data/quiz_question_model.dart';
+import 'package:rnly/app/modules/quiz/data/models/quiz_question_model.dart';
 import 'package:rnly/app/modules/quiz/domain/repository/quiz_repository.dart';
 import 'package:rnly/core/framework/base_notifier.dart';
 

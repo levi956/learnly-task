@@ -31,9 +31,9 @@ class _HtmlQuizPageState extends State<HtmlQuizPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 30),
+                const SizedBox(height: Spacings.spacing30),
                 const Padding(
-                  padding: EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: Spacings.spacing20),
                   child: Column(
                     children: [
                       Text(
@@ -47,35 +47,25 @@ class _HtmlQuizPageState extends State<HtmlQuizPage> {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const SizedBox(height: 30),
-                            const QuizTextCountComponent(),
-                            const SizedBox(height: 30),
-                            questionsNotifer.state.when(
-                              done: (questions) {
-                                return Column(
-                                  children: [
-                                    QuizQuestionsComponent(questions),
-                                    QuestionOptionsComponent(questions),
-                                  ],
-                                );
-                              },
-                              error: (_) => Text(_.toString()),
-                              loading: () =>
-                                  const CircularProgressIndicator.adaptive(),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                  child: ListView(
+                    children: [
+                      const SizedBox(height: Spacings.spacing30),
+                      const QuizTextCountComponent(),
+                      const SizedBox(height: Spacings.spacing30),
+                      questionsNotifer.state.when(
+                        done: (questions) {
+                          return Column(
+                            children: [
+                              QuizQuestionsComponent(questions),
+                              QuestionOptionsComponent(questions),
+                            ],
+                          );
+                        },
+                        error: (_) => Text(_.toString()),
+                        loading: () =>
+                            const CircularProgressIndicator.adaptive(),
+                      ),
+                    ],
                   ),
                 ),
               ],

@@ -34,19 +34,6 @@ class _DashboardPageState extends State<DashboardPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // Expanded(
-                        //   child: Center(
-                        //     child: Text(
-                        //       "No quiz score data yet",
-                        //       textAlign: TextAlign.center,
-                        //       style: TextStyle(
-                        //         color: white,
-                        //         fontSize: 20,
-                        //         fontWeight: FontWeight.bold,
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -62,7 +49,7 @@ class _DashboardPageState extends State<DashboardPage> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  "23",
+                                  "74",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 75,
